@@ -17,7 +17,7 @@ void print_line(int n)
 			a++;
 		}
 
-		_putchar('\n');
+	_putchar('\n');
 	}
 	else
 	_putchar('\n');
