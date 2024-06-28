@@ -1,23 +1,27 @@
 #include "main.h"
-
 /**
- *_strcat -copies the stringi pointed to by src
+ *_strcat -copies the string  pointed to by src
  *@src: pointer
- *@dest: pointe00r
+ *@dest: pointer
  *Return: a
  */
-char *_strcat(char *dest, char *src)
 
+char *_strcat(char *dest, char *src)
 {
 	char *a = dest;
 
 	while (*dest != '\0')
 	{
-		*src = *dest;
+		++dest;
+	}
+
+	while (*src != '\0')
+	{
+		*dest = *src;
 		src++;
 		dest++;
 	}
-	*src = '\0';
+	*dest = '\0';
 
 	return (a);
 }
