@@ -15,4 +15,5 @@ void print_line(int n);
 void print_diagonal(int n);
 void print_square(int size);
 void print_triangle(int size);
+char *_strncpy(char *dest, char *src, int n);
 #endif
