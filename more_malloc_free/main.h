@@ -3,7 +3,6 @@
 
 #include <unistd.h>
 #include <stdio.h>
-
 int _putchar(char c);
 char *create_array(unsigned int size, char c);
 char *_strdup(char *str);
@@ -13,4 +12,5 @@ void free_grid(int **grid, int height);
 void *malloc_checked(unsigned int b);
 void *_calloc(unsigned int nmemb, unsigned int size);
 int *array_range(int min, int max);
+char *string_nconcat(char *s1, char *s2, unsigned int n);
 #endif
