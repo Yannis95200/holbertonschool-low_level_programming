@@ -6,7 +6,7 @@
  *_strdup - Duplique une chaîne de caractèr
  *@str: La chaîe dupliqer
  *Return: Pointeur vers la chaîne dupliquée ou NULL si `str` est LL
-*/
+ */
 
 char *_strdup(char *str)
 {
@@ -15,20 +15,22 @@ char *_strdup(char *str)
 	int len;
 
 	len = 0;
-	a = (char *)malloc(sizeof(char) * len);
+
 	if (str == NULL)
 	{
 		return (NULL);
-	}
-	if (a == NULL)
-	{
-		return (NULL);
-
 	}
 	while (str[len] != '\0')
 	{
 		len++;
 	}
+	a = (char *)malloc(sizeof(char) * len);
+	if (a == NULL)
+	{
+		return (NULL);
+
+	}
+
 	for (i = 0; i < len; i++)
 	{
 		a[i] = str[i];
