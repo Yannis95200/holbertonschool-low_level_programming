@@ -1,4 +1,3 @@
-#include "function_pointers.h"
 #include "3-calc.h"
 #include <stdio.h>
 
@@ -49,7 +48,6 @@ int op_mul(int a, int b)
  *         Note: Division by zero is not handled here.
  */
 
-
 int op_div(int a, int b)
 {
 	return (a / b);
@@ -62,9 +60,7 @@ int op_div(int a, int b)
  * Return: The remainder of a divided by b.
  *         Note: Modulus by zero is not handled here.
  */
-
-
-int op_mod(int a, int b)i
+int op_mod(int a, int b)
 {
 	return (a % b);
 }
