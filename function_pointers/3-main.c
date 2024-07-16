@@ -8,7 +8,6 @@
  * Return: 0 on success, 1 on error.
  */
 
-
 int main(int argc, char *argv[])
 {
 	int a;
@@ -19,23 +18,27 @@ int main(int argc, char *argv[])
 	if (argc != 4)
 
 	{
-		printf("Usage: %s num1 operator num2\n", argv[0]);
-		return (1);
+		printf("Error\n");
+		exit(98);
 
 	}
-
+	
+	operation = get_op_func(argv[2]);
+	if (argv[2][1])
+	{
+		printf("Error\n");
+		exit(99);
+	}
 	a = atoi(argv[1]);
 	b = atoi(argv[3]);
-	operation = get_op_func(argv[2]);
 
 	if (operation == NULL)
 	{
 		printf("Error\n");
-		return (1);
+		exit(99);
 	}
 
 	sum = operation(a, b);
-
 	printf("%d\n", sum);
 	return (0);
 
