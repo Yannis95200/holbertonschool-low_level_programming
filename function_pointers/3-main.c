@@ -22,7 +22,7 @@ int main(int argc, char *argv[])
 		exit(98);
 
 	}
-	
+
 	operation = get_op_func(argv[2]);
 	if (argv[2][1])
 	{
