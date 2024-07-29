@@ -10,15 +10,18 @@
 *	each node, including the string stored in the node.
 */
 
-
 void free_list(list_t *head)
 {
+	list_t *current;
 	list_t *new_node;
 
-	while (head != NULL)
+	current = head;
 
-	new_node = head->next;
-	free(head->str);
-	free(head);
-	head = new_node;
+	while (current != NULL)
+	{
+		new_node = current->next;
+		free(current->str);
+		free(current);
+		current = new_node;
+	}
 }
